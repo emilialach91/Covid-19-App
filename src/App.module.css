@@ -1,5 +1,6 @@
 body {
-    background-color: #dcddeb;
+    background-color: #f3f3f3;
+    position: relative;
 }
 
 .container {
@@ -7,6 +8,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 }
 
 @media  (max-width: 770px){
@@ -16,6 +18,37 @@ body {
 }
 
 .image {
-    width: 280px;
-    margin: 20px auto 0 auto;
+    width: 300px;
+    top: 20px; 
+    position: absolute;
+    z-index: 10;
+    left:200px;
+}
+
+.header {
+    width: 100vw
+}
+
+
+button {
+    position: absolute;
+    z-index: 10;
+    top: 50px;
+    right: 200px;
+    width: 180px;
+    height: 60px;
+    background-color: #0e1b46;
+    color: white;
+    border-radius: 15px;
+    outline: none;
+    letter-spacing: 1.9px;
+    cursor:pointer;
+}
+
+.symptoms {
+    position: absolute;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f3f3f3;
 }
