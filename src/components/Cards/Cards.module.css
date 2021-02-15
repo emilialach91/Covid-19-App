@@ -3,22 +3,27 @@
 }
 
 .card {
-    margin: 50px 2% !important;
+    margin: 15px 2% !important;
     border: 0.5px solid rgb(102, 98, 98, 0.2);
+    
 }
 
 .infected {
     border-bottom: 15px solid rgb(255, 0, 0, 0.6) ;
+    margin: 15px 20px !important;
 }
 
 .recovered {
     border-bottom: 15px solid rgb(0, 128, 0 , 0.6);
+    margin: 15px 20px !important;
 }
 
 .deaths {
     border-bottom: 15px solid rgb(0, 0, 0, 0.6);
+    margin: 15px 20px !important;
 }
 
 .description {
     padding-top: 15px !important;
+    font-size: 18px !important;
 }
