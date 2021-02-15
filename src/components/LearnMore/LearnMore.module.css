@@ -1,0 +1,81 @@
+.container{
+    margin-top: 200px;
+    position: absolute;
+    z-index: 5;
+    width: 100vw;
+    background-color: #f3f3f3;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.learnMore {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.title{
+    color: red;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 20px 0 0 0;
+}
+
+.subtitle {
+    color: #035755;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 5px ;
+}
+
+.description {
+    max-width: 400px;
+    text-align: center;
+    margin: auto;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 10px;
+}
+
+.symptomsImage {
+    width: 60%;
+    display: block;
+    margin: 0 auto 50px auto;
+}
+
+.tiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.block {
+    width: 300px;
+    border: 0.5px solid rgb(184, 178, 178);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 30px 15px;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: ease-in-out .3s;
+}
+
+.block:hover {
+    transform: scale(1.02); 
+    transition: ease-in-out .3s;
+}
+
+.name {
+    margin: auto;
+    color: #035755;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contagionImage {
+    width: 70%;
+    display: block;
+    margin: 10px auto;
+}

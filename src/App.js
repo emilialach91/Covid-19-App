@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Cards, Chart, CountryPicker, Symptoms} from './components';
+import { Cards, Chart, CountryPicker, LearnMore} from './components';
 import styles from './App.module.css';
 import { fetchData } from './api';
 import coronaLogo from './images/Covid-logo.png';
@@ -38,9 +38,9 @@ class App extends React.Component{
         <div className={styles.container}>
           <div className={styles.header}>
             <img className={styles.image} src={coronaLogo} />
-            <button onClick={() => this.setState({ showing : !showing })}>SYPMTOMS</button>
+            <button onClick={() => this.setState({ showing : !showing })}>Learn More</button>
             { showing 
-                ? <Symptoms />
+                ? <LearnMore />
                 : null
             }  
         </div>  

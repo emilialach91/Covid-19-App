@@ -15,7 +15,7 @@ const Chart = ({ data: {confirmed, recovered, deaths}, country }) => {
         fetchAPI();
     }, []);
 
-    const lineChart = (
+    const lineChartConfirmed = (
         dailyData.length 
         ? (
             <Line 
@@ -26,13 +26,32 @@ const Chart = ({ data: {confirmed, recovered, deaths}, country }) => {
                     label:'infected',
                     borderColor:'#3333ff',
                     fill: true,
+                    marginBottom: '50px',
                 }, 
                 ],
             }}
          /> ) : null
     );
 
-    const countryLineChart = (
+    const lineChartDeaths = (
+        dailyData.length 
+        ? (
+            <Line
+            data={{
+                labels: dailyData.map(({ date }) => date),
+                datasets:[{
+                    data: dailyData.map(({ deaths }) => deaths),
+                    label:'deaths',
+                    borderColor:'#000',
+                    fill: true,
+                }, 
+            ],
+                
+            }}
+         /> ) : null
+    );
+
+    const barChart= (
      confirmed 
         ? (
             <Bar 
@@ -48,6 +67,7 @@ const Chart = ({ data: {confirmed, recovered, deaths}, country }) => {
                         data:[confirmed.value, recovered.value, deaths.value]
                     }]
                  }}
+    
                  option={{
                      legend: {display: false},
                      title: {display: true, text:`Current state in ${country}`},
@@ -59,9 +79,19 @@ const Chart = ({ data: {confirmed, recovered, deaths}, country }) => {
     
     return (
         <div className={styles.container}>
-            {country ? countryLineChart : lineChart}
+            <div>
+                 {country && barChart}  
+            </div>
+            <div className={styles.confirmed}>
+                {!country && lineChartConfirmed}  
+            </div>
+            <div className={styles.deaths}>
+                {!country && lineChartDeaths}
+            </div>
         </div>
     )
 }
+
+
 
 export default Chart
