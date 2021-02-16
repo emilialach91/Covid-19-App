@@ -8,12 +8,10 @@ import mark4 from '../../images/mark4.png';
 const LearnMore = () => {
   return (
     <div className={styles.container}>
-      <div classNAme={styles.learnMore}>
-        <h4 className={styles.title}>Covid-19</h4>
-        <h5 className={styles.subtitle}>Symptomps</h5>
-        <p className={styles.description}>Corona viruses are a type of virus. There are many different kinds, and some cause disease. A newly identified type has caused a recent outbreak of respiratory </p>
-        <div className={styles.symptomsImage}></div>
-      </div>
+      <h4 className={styles.title}>Covid-19</h4>
+      <h5 className={styles.subtitle}>Symptomps</h5>
+      <p className={styles.description}>Corona viruses are a type of virus. There are many different kinds, and some cause disease. A newly identified type has caused a recent outbreak of respiratory </p>
+      <div className={styles.symptomsImage}></div>
       <h4 className={styles.title}>Covid-19</h4>
       <h5 className={styles.subtitle}>Contagions</h5>
       <p className={styles.description}>Corona viruses are a type of virus. There are many different kinds, and some cause disease. A newly identified type </p>

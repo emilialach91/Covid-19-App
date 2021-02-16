@@ -1,19 +1,20 @@
 .container{
-    padding-top: 250px;
+    padding-top: 150px;
     position: absolute;
     z-index: 1;
     background-color: #f3f3f3;
     font-family: 'Open Sans', sans-serif;
     width: 100vw;
     background-image: url('../../images/learnMore-background.png');
-    background-position: top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.learnMore {
-    display: flex;
-    justify-content: center;
+@media (max-width: 921px){
+    .container{
+        padding-top: 200px;
+    }
 }
 
 .title{
