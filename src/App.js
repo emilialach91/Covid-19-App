@@ -36,7 +36,7 @@ class App extends React.Component{
     this.setState({ 
       color:  this.state.showing ? '#0e1b46' : 'red',
       showing: !this.state.showing,
-      text: this.state.showing ? 'Learn more' : 'Startistics'
+      text: this.state.showing ? 'Learn more' : 'Statistics'
     });
 
     console.log(this.state.text)
