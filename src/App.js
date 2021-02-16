@@ -12,7 +12,9 @@ class App extends React.Component{
   state = {
     data: {},
     country: '',
+    color: '#0e1b46',
     showing: false,
+    text: 'Learn More'
   }
 
 
@@ -29,21 +31,29 @@ class App extends React.Component{
     
   }
 
+  onChange= () => {
+    this.setState({ 
+      color: 'red',
+      showing: true,
+      text: 'Statistics'
+    });
+ }
 
     render () {
     const { data, country } = this.state;
-    const { showing } = this.state;
+    const { showing, color, text} = this.state;
+
 
       return (
         <div className={styles.container}>
           <div className={styles.header}>
             <img className={styles.image} src={coronaLogo} />
-            <button onClick={() => this.setState({ showing : !showing })}>Learn More</button>
+            <button style={{ backgroundColor: this.state.color}} onClick={this.onChange}>{text}</button>
             { showing 
                 ? <LearnMore />
                 : null
             }  
-        </div>  
+          </div>  
           <Cards data={data}/>
           <CountryPicker handleCountryChange={this.handleCountryChange}/>
           <Chart data={data} country={country}/>
@@ -53,3 +63,5 @@ class App extends React.Component{
 }
 
 export default App;
+
+

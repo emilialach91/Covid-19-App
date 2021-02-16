@@ -8,7 +8,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: relative;
 }
 
 @media  (max-width: 770px){
@@ -18,42 +17,42 @@ body {
 }
 
 .image {
-    width: 300px;
-    top: 20px; 
-    position: absolute;
-    z-index: 10;
-    left:200px;
+    height: 150px;
+    position:absolute;
+    z-index: 15;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+@media  (max-width: 540px) {
+    .image {
+        top: 40px;
+        height: 100px;
+    } 
 }
 
 .header {
-    width: 100vw
+    width: 100vw;
+    background-color: #f3f3f3;
 }
-
 
 button {
     position: absolute;
-    z-index: 10;
-    top: 50px;
-    right: 200px;
-    width: 180px;
-    height: 60px;
+    top: 150px;
+    left: 25%;
+    width: 50%;
+    height: 40px;
     background-color: #0e1b46;
     color: white;
     border-radius: 15px;
     outline: none;
     letter-spacing: 1.9px;
     cursor:pointer;
+    margin: 0 auto;
+    z-index: 15;
 }
 
-@media only screen and (max-width: 960px) {
-    button {
-        top: 180px;
-        left: 50%;
-        height: 45px;
-    }
 
-    .image {
-        right: 50%;
-    }
-}
 

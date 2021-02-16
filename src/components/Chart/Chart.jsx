@@ -79,14 +79,13 @@ const Chart = ({ data: {confirmed, recovered, deaths}, country }) => {
     
     return (
         <div className={styles.container}>
-            <div>
-                 {country && barChart}  
-            </div>
             <div className={styles.confirmed}>
-                {!country && lineChartConfirmed}  
-            </div>
-            <div className={styles.deaths}>
-                {!country && lineChartDeaths}
+                {country && barChart}  
+                {!country && lineChartConfirmed} 
+                <div className={styles.deaths} >
+                    {!country && lineChartDeaths}
+                </div>
+
             </div>
         </div>
     )

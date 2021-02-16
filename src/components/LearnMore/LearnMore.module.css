@@ -1,14 +1,17 @@
 .container{
-    margin-top: 200px;
+    padding-top: 250px;
     position: absolute;
-    z-index: 5;
-    width: 100vw;
+    z-index: 1;
     background-color: #f3f3f3;
     font-family: 'Open Sans', sans-serif;
+    width: 100vw;
+    background-image: url('../../images/learnMore-background.png');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .learnMore {
-    width: 100vw;
     display: flex;
     justify-content: center;
 }
@@ -38,9 +41,21 @@
 }
 
 .symptomsImage {
-    width: 60%;
+    width: 100%;
     display: block;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 80px auto;
+    background-image: url('../../images/symptoms.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 600px;
+}
+
+@media only screen and (max-width: 770px) {
+    .symptomsImage {
+        height: 400px;
+        margin-bottom: 20px;
+    } 
 }
 
 .tiles {
@@ -48,6 +63,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 20px 0 80px 0;
 }
 
 .block {
@@ -62,20 +78,150 @@
     transition: ease-in-out .3s;
 }
 
+@media only screen and (max-width: 770px) {
+    .block{
+        width: 250px;
+        height: 300px;
+    }
+}
+
 .block:hover {
     transform: scale(1.02); 
     transition: ease-in-out .3s;
 }
 
 .name {
-    margin: auto;
+    text-align: center;
     color: #035755;
     font-size: 18px;
     margin-bottom: 10px;
 }
 
-.contagionImage {
-    width: 70%;
+.air {
+    background-image: url('../../images/airTransmission.png'); 
+    width: 300px;
+    height: 300px;
     display: block;
-    margin: 10px auto;
+    margin: 0 auto;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; 
+}
+
+.contact {
+    background-image: url('../../images/humanContacts.png');
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.objects {
+    background-image: url('../../images/containtedObjects.png');
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 770px) {
+    .air, .contact, .objects{
+        width: 250px;
+        height: 300px;
+    }
+}
+
+
+.row {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.line {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 60px 12%;
+}
+.mark {
+    width: 30px;
+    height: 30px;
+}
+
+.number {
+    display: flex;
+    flex-direction: row;
+}
+
+.advice {
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 1.8;
+    max-width: 500px;
+    text-align: justify;
+    opacity: 0.8;
+}
+
+.mask, .hands, .nose, .contacts {
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.mask {
+    background-image: url('../../images/Mask.png');
+}
+
+.hands {
+    background-image: url('../../images/Hands.png');
+}
+
+.nose {
+    background-image: url('../../images/Nose.png');
+}
+
+.contacts {
+    background-image: url('../../images/Contacts.png');
+}
+
+@media only screen and (max-width: 921px) {
+    .hands, .contacts {
+        display: none;
+    }
+}
+
+
+.mobileContacts {
+    display: none;
+    width: 200px;
+    height: 200px;
+    background-image: url('../../images/Contacts.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.mobileHands {
+    display: none;
+    width: 200px;
+    height: 200px;
+    background-image: url('../../images/Hands.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 921px) {
+    .mobileHands, .mobileContacts{
+        display: block;
+    }
 }
