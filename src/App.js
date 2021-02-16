@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Cards, Chart, CountryPicker, LearnMore} from './components';
+import { Cards, Chart, CountryPicker, LearnMore } from './components';
 import styles from './App.module.css';
 import { fetchData } from './api';
 import coronaLogo from './images/Covid-logo.png';
@@ -11,10 +11,10 @@ class App extends React.Component{
   
   state = {
     data: {},
-    country: '',
+    country: '', 
     color: '#0e1b46',
     showing: false,
-    text: 'Learn More'
+    text: 'Learn more',
   }
 
 
@@ -31,12 +31,15 @@ class App extends React.Component{
     
   }
 
+
   onChange= () => {
     this.setState({ 
-      color: 'red',
-      showing: true,
-      text: 'Statistics'
+      color:  this.state.showing ? '#0e1b46' : 'red',
+      showing: !this.state.showing,
+      text: this.state.showing ? 'Learn more' : 'Startistics'
     });
+
+    console.log(this.state.text)
  }
 
     render () {
@@ -48,12 +51,13 @@ class App extends React.Component{
         <div className={styles.container}>
           <div className={styles.header}>
             <img className={styles.image} src={coronaLogo} />
-            <button style={{ backgroundColor: this.state.color}} onClick={this.onChange}>{text}</button>
+        
+            <button style={{ backgroundColor: color}} onClick={this.onChange}>{text}</button>
             { showing 
                 ? <LearnMore />
                 : null
             }  
-          </div>  
+          </div> 
           <Cards data={data}/>
           <CountryPicker handleCountryChange={this.handleCountryChange}/>
           <Chart data={data} country={country}/>

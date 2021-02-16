@@ -54,7 +54,7 @@
 @media only screen and (max-width: 770px) {
     .symptomsImage {
         height: 400px;
-        margin-bottom: 20px;
+        margin-bottom: 0;
     } 
 }
 
@@ -137,7 +137,6 @@
     }
 }
 
-
 .row {
     max-width: 1200px;
     margin: 0 auto;
@@ -150,6 +149,7 @@
     justify-content: space-around;
     margin: 60px 12%;
 }
+
 .mark {
     width: 30px;
     height: 30px;
@@ -198,7 +198,6 @@
         display: none;
     }
 }
-
 
 .mobileContacts {
     display: none;

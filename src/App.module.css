@@ -20,30 +20,33 @@ body {
     height: 150px;
     position:absolute;
     z-index: 15;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    text-align: center;
+    left: 15%;
 }
 
-@media  (max-width: 540px) {
+@media  (max-width: 921px) {
     .image {
-        top: 40px;
-        height: 100px;
-    } 
+        height: 120px;
+        position:absolute;
+        z-index: 15;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
 }
-
+    
 .header {
     width: 100vw;
     background-color: #f3f3f3;
 }
 
 button {
+    border: none;
     position: absolute;
-    top: 150px;
-    left: 25%;
-    width: 50%;
-    height: 40px;
+    top: 75px;
+    right: 15%;
+    width: 200px;
+    height: 50px;
     background-color: #0e1b46;
     color: white;
     border-radius: 15px;
@@ -52,6 +55,20 @@ button {
     cursor:pointer;
     margin: 0 auto;
     z-index: 15;
+}
+
+@media  (max-width: 921px) {
+    button {
+        height: 40px;
+        width: 40%;
+        top: 140px;
+        position:absolute;
+        z-index: 15;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
 }
 
 
