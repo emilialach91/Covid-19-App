@@ -49,7 +49,7 @@ npm start
 
 ### Contagions section
 
-![Contagions-section](https://user-images.githubusercontent.com/59490664/108211814-12ea3680-7125-11eb-847d-7706c6583e31.png)
+![Contagions-section](https://user-images.githubusercontent.com/59490664/108212183-7b391800-7125-11eb-947e-26b0efac4351.png)
 
 ### Guide section
 
