@@ -1,4 +1,4 @@
-https://emilia-lach.dev/
+https://emilialach91.github.io/Covid-19-App/
 
 ## Overview
 We live in an era of global pandemic, so it is important to be aware of the current situation. The Covid-19 app will easily show you the exact number of daily new cases, recoveries and deaths globally and in each country. Additional page allows you to check symptoms of Covid-19, contagions and all necessary steps to prevent new infections.
@@ -20,7 +20,7 @@ npm i
 ```
 npm start
 ```
-```
+
 
 ## Preview
 
